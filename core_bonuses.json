@@ -62,7 +62,7 @@
         "id": "bdf_nanoweb_countermeasures",
         "name": "Nanoweb Countermeasures",
         "source": "BDF",
-        "effect": "1/round, your mech can remove a condition when it Boosts. If your mech passes adjacent to a hostile character when it uses this effect, you can add the Lock On condition to that character. Slowed, Stunned, and Immobilized conditions can be removed this way and do not prevent a Boost if a Boost is the first action on your turn after protocol actions.",
+        "effect": "1/round, your mech can remove a condition when it Boosts. If your mech passes adjacent to a hostile character when it uses this effect, you can add the Lock On condition to that character. Slowed, Stunned, and Immobilized conditions can be removed this way and do not prevent a Boost if a Boost is the first action on your turn after protocol actions. This core bonus effect can be used even without a condition present on you.",
         "description": "Self-sealing nanite armor plates in the BDF’s elite units allow them to both stay in the fight longer as well as channel the resultant sparks into a light show capable of painting targets.",
         "synergies": [
             {

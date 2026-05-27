@@ -54,7 +54,7 @@
                 {
                     "name": "Whale Beacon",
                     "activation": "Quick",
-                    "detail": "1/round you can detonate any Drone in line of sight and Sensors as a Quick Action, Destroying it.  Alternately, this Quick Action can be used on a character with Lock On condition, which does not cause an effect to the target. If the target is a drone controlled by an ally, the ally can veto the request to destroy their drone. This creates an area originating from the drone's space in one of these sizes: (Line 8, 3 wide; Blast 2 within range 5 of the targeted Drone; or three Blast 1 areas within Range 3 of the targeted zone that deal an additional 3 Knockback); enemies in these areas at the start of your next turn take 2d6+GRIT EXPLOSIVE damage, half on a hull save; 1/scene if a character is Destroyed by a Whale Beacon activation or forced save, gain a repair.",
+                    "detail": "1/round you can detonate any Drone in line of sight and Sensors as a Quick Action, Destroying it. Alternately, this Quick Action can be used on a character with Lock On condition, which does not cause an effect to the target. If the target is a drone controlled by an ally, the ally can veto the request to destroy their drone. This then creates an area originating from the targeted character's space in one of these sizes: (either Line 8, 3 wide; Blast 2 within range 5 of the targeted Drone; or three Blast 1 areas within Range 3 of the targeted zone that deal an additional 3 Knockback per zone); enemies in these areas at the start of your next turn must pass a HULL Save or take 2d6+GRIT EXPLOSIVE damage. On a success, they take half damage. 1/scene if a character is Destroyed by a Whale Beacon's damage or targeted effect, gain a repair.",
                     "use": "round"
                 }
             ]
@@ -89,11 +89,11 @@
         "traits": [
             {
                 "name": "Weapon Bracing",
-                "description": "The Akrafena comes with 4 weapon mounts capable of mounting 1 Main or smaller weapon apiece, mounted in left and right pairs. When firing one of these paired mounted weapons as a Skirmish or Barrage, 1/turn the Akrafena can fire another Main weapon from that same pair of mounts. After firing a weapon with those actions, the Akrafena cannot fire weapons from any other non-integrated mount until the start of the next turn.",
+                "description": "The Akrafena comes with 4 weapon mounts, each capable of mounting 1 Main or smaller weapon apiece, mounted in left and right pairs. 1/turn, When attacking with one of these paired mounted weapons as a Skirmish or Barrage, the Akrafena can attack with another Main weapon from that same pair of mounts. After firing a paired weapon, the Akrafena cannot fire weapons from any other non-integrated mount until the start of the next turn.",
                 "synergies": [
                     {
                         "locations": ["weapon"],
-                        "detail": "After firing a weapon with the Skirmish or Barrage action, you cannot fire weapons from any other non-integrated mounts until the start of the next turn."
+                        "detail": "After firing a paired weapon, the Akrafena cannot fire weapons from any other non-integrated mount until the start of the next turn."
                     }
                 ]
             },
@@ -178,7 +178,7 @@
             },
             {
                 "name": "Leg Room",
-                "description": "Your mech can comfortably carry another human sized being inside it, along with increasing the amount of systems with the AI tag that you can mount by +2.",
+                "description": "Your mech gains the AI tag. Your mech can comfortably carry another human sized being inside it, along with increasing the amount of systems with the AI tag that you can mount by +2.",
                 "bonuses": [
                     {
                         "id": "ai_cap",
@@ -363,7 +363,59 @@
             "name": "Deployable Mechanized Combat Vehicle",
             "description": "While mechanized cavalry chassis legs are a tangible advantage in rugged terrain, open plains and paved roads require additional tools to compete with armor. Specialized modular drones can reconfigure to allow for rapid deployment of frames and dismounted pilots alike. The coin grenades on the Jian were invented by a Karrakin Royal Foundries lambbeef line cook tired of being unable to tip his local BDF peacekeepers, so the cook repurposed a printer to create customized munitions by way of thanks.",
             "active_name": "“Moonlight” Combat Cycle",
-            "active_effect": "Deploy two Drones with 20 HP which occupy 1x2x1 spaces each into adjacent free and valid spaces. The drones count as Size 1 and each can hold one size 1 or size ½ actor as a rider. The drones can combine as a Protocol into a single Size 2 character to hold a size 2 actor. A character may mount either drone as a Quick Action, moving the drones with them on all their movements. As a protocol, you may move each of the drones up to 6 spaces (independently if they aren’t combined), carrying their riders with them. As a Quick Action per drone, you can prime a Self Destruct on that drone, which then explodes at the end of the next turn in a Blast 2 area for 2d6 damage, or half damage on a successful AGILITY save.",
+            "active_effect": "Deploy two Drones with 20 HP which occupy 1x2x1 spaces each into adjacent free and valid spaces. The drones count as Size 1 and each can hold one size 1 or size ½ actor as a rider. The drones can combine as a Protocol into a single Size 2 character to hold a Size 2 actor. A character may mount either drone as a Quick Action, moving the drones with them on all their movements. As a protocol, you may move each of the drones up to 6 spaces (independently if they aren’t combined), carrying their riders with them. As a Quick Action per drone, you can prime a Self Destruct on that drone, which then explodes at the end of the next turn in a Blast 2 area for 2d6 damage, or half damage on a successful AGILITY save.",
+            "active_deployables": [
+                {
+                    "name": "“Moonlight” Combat Cycle",
+                    "type": "Drone",
+                    "size": 1,
+                    "hp": 20,
+                    "evasion": 10,
+                    "edef": 10,
+                    "actions": [
+                        {
+                            "name": "Combine",
+                            "activation": "Protocol",
+                            "detail": "The two Moonlight Cycles combine into one size 2 actor. Current HP values are added together, along with maximum HP values. Statuses and conditions on both drones are combined, adding stacks together."
+                        },
+                        {
+                            "name": "Move",
+                            "activation": "Protocol",
+                            "detail": "Move this drone 6 spaces."
+                        },
+                        {
+                            "name": "Self Destruct Cycle",
+                            "activation": "Quick",
+                            "detail": "Prime a Self Destruct on this Drone, which then explodes at the end of the next turn in a BURST 2 area for 10 AP damage."
+                        }
+                    ]
+                },
+                {
+                    "name": "“Full Moonlight” Combat Cycle",
+                    "type": "Drone",
+                    "size": 2,
+                    "hp": 40,
+                    "evasion": 10,
+                    "edef": 10,
+                    "actions": [
+                        {
+                            "name": "Split",
+                            "activation": "Protocol",
+                            "detail": "The Full Moonlight Combat Cycle splits back into its component Moonlight Combat Cycles. Current HP values are divided equally between them, along with the maximum HP value. Statuses and conditions are split equally to both Drones, rounded up."
+                        },
+                        {
+                            "name": "Move",
+                            "activation": "Protocol",
+                            "detail": "Move this drone 6 spaces."
+                        },
+                        {
+                            "name": "Full Self Destruct Cycle",
+                            "activation": "Quick",
+                            "detail": "Prime a Self Destruct on this Drone, which then explodes at the end of the next turn in a BURST 2 area for 20 AP damage."
+                        }
+                    ]
+                }
+            ],
             "use": "Encounter",
             "activation": "Protocol",
             "passive_name": "INTEGRATED SYSTEM NOTIFICATION",
@@ -455,7 +507,7 @@
         "description": "BDF Engineers were tasked with the impossible, of mounting the heaviest payloads on the tallest, most mobile chassis on the battlefield.  Aggressive negotiations during the prototyping phase thanks to the House of Hues resulted in the development of the Khanda, a frame capable of rapid repositioning and unparalleled firepower at angles traditional chassis could not make. Often festooned in regalia and with signature forearm-mounted weaponry allowing for unhindered hands, Khanda chassis are often seen on public relations tours by aspiring Barons of minor Houses fraternizing with BDF pilots and civilians alike.",
         "mounts": ["Heavy","Heavy"],
         "stats": {
-            "size": 2,
+            "size": 1,
             "structure": 4,
             "stress": 4,
             "armor": 1,
@@ -543,7 +595,7 @@
             },
             {
                 "name": "Low Profile",
-                "description": "The Kiem occupies 1 less space vertically than its size (for example, as a Size 2, it occupies 2 spaces wide, 2 spaces long, and 1 space tall and draws Line of Sight over cover from Height 1). It always counts as size 1 for Grapples and Rams. The surfaces of the Kiem count as valid spaces to attach Deployables, which then move with the Kiem."
+                "description": "The Kiem occupies 1 less space vertically than its size (for example, as a Size 2, it occupies 2 spaces wide, 2 spaces long, and 1 space tall and draws Line of Sight over cover from Height 1). It always counts as size 1 for performing and being targeted by Grapples and Rams. The surfaces of the Kiem count as valid spaces to attach Deployables, which then move with the Kiem."
             }
         ],
         "core_system": {
@@ -599,12 +651,12 @@
             },
             {
                 "name": "Follow-Through",
-                "description": "The Klewang can move 2 spaces when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target). Additionally, if the Klewang moves at least 4 spaces in a turn from its starting position, 1/round it can move 2 additional spaces in the direction of its last movement.",
+                "description": "The Klewang can move 2 spaces when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target). Additionally, if the Klewang moves at least 4 spaces in a turn from its starting position, 1/round it can move 2 additional spaces in the direction of its last movement.<br><br>These additional movements ignore difficult terrain and climb at full speed.",
                 "use": "Free",
                 "synergies": [
                     {
                         "locations": ["weapon"],
-                        "detail": "The Klewang can move 2 spaces when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target)."
+                        "detail": "The Klewang can move 2 spaces when hitting with a melee attack; this movement must be directly towards an enemy character (not necessarily the original target).<br><br>This additional movement ignores difficult terrain and climbs at full speed."
                     }
                 ]
             }
@@ -656,7 +708,7 @@
         "traits": [
             {
                 "name": "HiveFlight Boosters",
-                "description": "The Shotel can fly when it moves. When the Shotel ends its turn without having made a weapon attack, its next weapon attack after the start of its next turn Impairs all enemies affected.",
+                "description": "The Shotel can fly when it moves. When the Shotel ends its turn without having made a weapon attack, its next weapon attack after the start of its next turn Impairs all enemies affected until the end of their next turn.",
                 "synergies": [
                     {
                         "locations": ["move","boost"],

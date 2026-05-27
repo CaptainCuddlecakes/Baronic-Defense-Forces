@@ -7,7 +7,7 @@
         "range": [{"type": "Range","val": 10}],
         "damage": [{"type": "Kinetic","val": 2}],
         "tags": [{"id": "tg_loading"}],
-        "effect": "Enemies hit by this weapon are marked with an explosive limpet charge, up to 6 times (use a die to track this). When you reload this weapon, all limpets on the target explode in a <b>BLAST</b> 1 area, causing 1d3 <b>EXPLOSIVE</b> damage per charge and pushing the target 2 spaces in a direction of your choice. If your target is Destroyed before detonating the limpets, the limpets remain on the target’s wreck and can still be detonated.",
+        "effect": "Enemies hit by this weapon or copies of this weapon from the same character are marked with an explosive limpet charge, up to 6 times (use a die to track this). When you reload this weapon, all limpets on the target explode in a <b>BLAST</b> 1 area, causing 1d3 <b>EXPLOSIVE</b> damage per charge and pushing the target 2 spaces in a direction of your choice. If your target is Destroyed before detonating the limpets, the limpets remain on the target’s wreck and can still be detonated.",
         "source": "BDF",
         "license": "AKINAKA",
         "license_level": 1,
@@ -220,8 +220,8 @@
         "damage": [{"type": "Energy","val": 0}],
         "range": [{"type": "Range","val": 10},{"type": "Blast","val": 1}],
         "tags": [{"id": "tg_knockback", "val": 2}],
-        "effect": "This weapon cannot be fired normally, and automatically hits.<br>When you consume Lock On, this weapon may attack targeting the character who had Lock On status.",
-        "on_hit": "Gain the Lock On condition."
+        "effect": "This weapon cannot be fired normally.<br>2/round, When you consume Lock On this weapon may attack targeting the character who had Lock On condition. This weapon automatically hits.",
+        "on_hit": "Target gains the Lock On condition."
     },
     {   "id": "bdf_poetry_cannon",
         "name": "Poetry Rockets",
@@ -356,13 +356,13 @@
                 "name": "Counterbattery",
                 "range": [{"type": "Range","val": 20},{"type": "Blast","val": 2}],
                 "damage": [{"type": "Energy","val": "1d6"}],
-                "tags": [{"id": "tg_heat_self","val": 2},{"id": "tg_knockback","val": 2},{"id": "tg_arcing"}]
+                "tags": [{"id": "tg_heat_self","val": 2},{"id": "tg_knockback","val": 2},{"id": "tg_arcing"},{"id": "tg_ap"}]
             },
             {
                 "name": "Triple Tap",
                 "range": [{"type": "Range","val": 15}],
                 "damage": [{"type": "Energy","val":3}],
-                "tags": [{"id": "tg_heat_self","val": 1},{"id": "tg_knockback","val": 2}]
+                "tags": [{"id": "tg_heat_self","val": 1},{"id": "tg_knockback","val": 2},{"id": "tg_ap"}]
             }
         ],
         "effect": "On Attack: Choose to fire in either Counterbattery mode or Triple Tap mode.<br>If firing in Triple Tap mode, this weapon applies its on-hit effects three times sequentially. Sources of <b>BONUS DAMAGE</b> are only applied once.",

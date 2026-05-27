@@ -82,7 +82,7 @@
                 "edef": 10,
                 "cost": 1,
                 "activation": "Other",
-                "detail": "The Lion Coast Missile can only be deployed after successfully executing Release the Lion and hitting its tech attack.<br>The missile moves up to 6 spaces towards your target at the start of the turn as long as your target has LOCK ON condition, or up to 3 spaces if the target does not have LOCK ON. The missile moves as directly as possible during all movement, but maneuvers around cover and obstructions as long as there is space to do so. If the missile collides with a character during its movement or is Destroyed, it detonates in a Burst 1 explosion.<br><br>Characters within the affected area must make an <b>AGILITY</b> save. On fail, they take 3d6+2 <b>EXPLOSIVE</b> damage; on success, they take half damage. Destroying the Lion Coast Missile does not destroy this System."
+                "detail": "The Lion Coast Missile can only be deployed after successfully executing Release the Lion and hitting its tech attack.<br>The missile moves up to 6 spaces towards your target at the start of the turn as long as your target has LOCK ON condition, or up to 3 spaces if the target does not have LOCK ON. The missile moves as directly as possible during all movement, but maneuvers around cover and obstructions as long as there is space to do so. If the missile collides with a character during its movement or is Destroyed, it detonates in a Burst 1 explosion. Characters within 10 spaces above or below the Burst 1 explosion are also part of the affected area<br><br>Characters within the affected area must make an <b>AGILITY</b> save. On fail, they take 3d6+2 <b>EXPLOSIVE</b> damage; on success, they take half damage. Destroying the Lion Coast Missile does not destroy this System."
             }
         ],
         "description": "<i>The minor Baronic House of Mouse insisted all BDF pilots have access to a “crowbar” on demand for general utility work.  BDF quartermasters took the request liberally and instead developed advanced laser painting systems for cruise missile strikes able to be licensed to hardened frontline spotters embedded in BDF ranks.</i>"
@@ -305,7 +305,7 @@
             {
                 "name": "Hit the Deck",
                 "activation": "Invade",
-                "detail": "Your target is pushed 3 spaces, becomes Prone and has +2 difficulty against all incoming attacks until the start of their next turn."
+                "detail": "Your target is pushed 3 spaces in a direction of your choice, becomes Prone, and attacks against your target receive +2 difficulty until the start of their next turn."
             },
             {
                 "name": "Inspiring Anthem",
@@ -360,7 +360,7 @@
             {
                 "name": "Positional Mapping",
                 "activation": "Full Tech",
-                "detail": "Mark in sensor range 3 Blast 1 areas in free spaces or containing spaces with planted mines (this can include obstructed spaces).  The next grenade thrown onto each of those marked areas or mine detonated on each those marked areas deals an additional 2 heat and 1 knockback to up to 3 targets caught in the area of effect (up to 6 heat total per detonated mine or grenade)."
+                "detail": "Mark in sensor range 3 Blast 1 areas with free spaces in the center or containing spaces with planted mines (this can include obstructed spaces).  The next grenade thrown onto each of those marked areas or mine detonated on each those marked areas deals an additional 2 heat and 1 knockback to up to 3 targets caught in the area of effect (up to 6 heat total per detonated mine or grenade)."
             }
         ],
         "description": "<i>Baronic command-and-control units rely on telemetrics provided by frontline scouts to coordinate fire support missions and troop movements.<br><br>“Hacking the BUC just isn’t fun any more. It’s all information we already know - where we are, where we’re going, what’s going to blow us up.”</i>"
