@@ -9,7 +9,7 @@
         {
             "version": "1.8.01",
             "date": "2026-07-22",
-            "changes": "Fixed Dao's Subalterns to track stats correctly."
+            "changes": ["Fixed Dao's Subalterns to track stats correctly."]
         }
     ]
 }
