@@ -7,9 +7,9 @@
     "website": "https://captaincuddlecakes.itch.io/the-bdf-pdf",
     "version_history": [
         {
-            "version": "1.8.0",
-            "date": "2026-05-04",
-            "changes": "See github note (sorry)"
+            "version": "1.8.01",
+            "date": "2026-07-22",
+            "changes": "Fixed Dao's Subalterns to track stats correctly."
         }
     ]
 }
