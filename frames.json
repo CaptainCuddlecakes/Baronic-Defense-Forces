@@ -300,13 +300,13 @@
                 {
                     "name": "Subaltern Drone",
                     "type": "Drone",
-                    "detail": "<b>This drone's Edef, Evasion, and Speed are equal to your mech's. The default unadjusted DAO stats have been input for your convenience, but you will need to track changes manually.</b><br><br>When deploying a new Subaltern Drone as a Full Action, create a Burst 2 zone of Soft Cover that lasts until the end of your next turn.<br><br>1/round per Subaltern Drone, this drone can make ranged attacks against targets within Range 8 of it with your GRIT against Evasion for 4 KINETIC damage as a Free action. Targets hit by these attacks gain +1 Difficulty on attacks targeting allied mech characters and the Dao until the end of their next turn, up to +3 Difficulty.",
+                    "detail": "<b>This drone's Edef, Evasion, and Speed are equal to your mech's.</b><br><br>When deploying a new Subaltern Drone as a Full Action, create a Burst 2 zone of Soft Cover that lasts until the end of your next turn.<br><br>1/round per Subaltern Drone, this drone can make ranged attacks against targets within Range 8 of it with your GRIT against Evasion for 4 KINETIC damage as a Free action. Targets hit by these attacks gain +1 Difficulty on attacks targeting allied mech characters and the Dao until the end of their next turn, up to +3 Difficulty.",
                     "activation": "Full",
                     "size": 0.5,
                     "hp": "10 + {grit}",
-                    "edef": 9,
-                    "evasion": 7,
-                    "speed": 4
+                    "edef": "{edef}",
+                    "evasion": "{evasion}",
+                    "speed": "{speed}"
                 }
             ],
             "passive_effect": "Your mech can print independent Drone companions. This drone can be deployed in an adjacent space and moves independently on your turn. The Subaltern Drone shares your EVASION, E-DEFENSE, and SPEED. Begin the scene with 1 Subaltern Drone already in play."
